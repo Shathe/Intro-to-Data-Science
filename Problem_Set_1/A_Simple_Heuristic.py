@@ -63,9 +63,9 @@ def simple_heuristic(file_path):
         #
         sex=passenger['Sex']
         passenger_id = passenger['PassengerId']
-        if sex=="female":
-            predictions[passenger_id] = 1
+        if passenger['Sex'] == 'male':
+			predictions[passenger_id] = 0
         else:
-            predictions[passenger_id] = 0
+            predictions[passenger_id] = 1
             
     return predictions
